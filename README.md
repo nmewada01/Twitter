@@ -1,4 +1,4 @@
-# Twitter meme official
+# Twitter meme official (Responsive)
 
 ## Deploy link : https://nareshrajput-twittermeme.vercel.app/
 
