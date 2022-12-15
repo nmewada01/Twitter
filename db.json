@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "username": "John",
+      "tweet": "Laughin own",
+      "gif": "https://media2.giphy.com/media/xUA7aM09ByyR1w5YWc/giphy.gif?cid=e9ac2e6ckzd0wcliymhttdv4y1ofbn19s4m3uc9dz9vh5ft3&rid=giphy.gif&ct=g",
+      "id": 2
+    },
+    {
+      "username": "naresh",
+      "tweet": "Hey! I am Vinod",
+      "gif": "https://media1.giphy.com/media/13t8GVV8ADEZk4/giphy.gif?cid=e9ac2e6cxwjqxrvvfdroxtmhabrlz3r82z636o02kvdepepa&rid=giphy.gif&ct=g",
+      "id": 4
+    }
+  ],
+  "registerUsers": [
+    {
+      "username": "naresh",
+      "email": "naresh@gmail.com",
+      "password": "naresh",
+      "image": "https://media-exp1.licdn.com/dms/image/C4E03AQGInoSocySBIg/profile-displayphoto-shrink_100_100/0/1646467268654?e=1676505600&v=beta&t=lSsjVt6RNzo0Vp-rckds97mREDBTig3PPmvUjZLeIgs",
+      "id": 1
+    },
+    {
+      "username": "nihal",
+      "email": "nihal@gmail.com",
+      "password": "nihal",
+      "image": "https://media-exp1.licdn.com/dms/image/C5103AQHldiNdkhoUNw/profile-displayphoto-shrink_100_100/0/1580827972429?e=1676505600&v=beta&t=rZVjq25uCu2sobzrGi4C1cFStXyZ6lygeoBkevUl4nk",
+      "id": 2
+    }
+  ],
+  "loginProfile": [
+    {
+      "username": "naresh",
+      "email": "naresh@gmail.com",
+      "password": "naresh",
+      "image": "https://media-exp1.licdn.com/dms/image/C4E03AQGInoSocySBIg/profile-displayphoto-shrink_100_100/0/1646467268654?e=1676505600&v=beta&t=lSsjVt6RNzo0Vp-rckds97mREDBTig3PPmvUjZLeIgs",
+      "id": 1
+    }
+  ]
+}
