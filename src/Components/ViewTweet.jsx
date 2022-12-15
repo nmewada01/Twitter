@@ -58,14 +58,14 @@ export default function ViewTweet() {
   }
   return (
     <Flex justifyContent={"center"}>
-      <Box as={SimpleGrid} columns={3} spacing={"10"}>
+      <Box as={SimpleGrid} columns={[1, 2,2, 3]} spacing={"10"} fontSize={["sm","md","md","md"]} >
         {tweets.map((el, index) => {
           return (
             <Card
               maxW="md"
               key={index}
               boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
-              p={"1rem"}
+              p={["", "1rem"]}
             >
               <CardHeader>
                 <Flex spacing="4">

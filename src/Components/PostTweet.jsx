@@ -21,6 +21,7 @@ import {
 import axios from "axios";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { getTweets } from "../Redux/action";
 
 export const PostTweet = () => {
@@ -31,6 +32,7 @@ export const PostTweet = () => {
   const [searchGif, setSearchGif] = useState("");
   const [gifItems, setGifItems] = useState([]);
   const [selectedGif, setSelectedGif] = useState("");
+  const navigate = useNavigate();
   const toast = useToast();
   async function searchForGif() {
     let { data } = await axios.get(
@@ -40,16 +42,38 @@ export const PostTweet = () => {
   }
 
   async function postTweet() {
-    await axios.post("https://nareshrajput-sportsk.up.railway.app/posts", {
-      username: userLoggedIn.username || "username",
-      tweet: tweet,
-      gif: selectedGif,
-      image: userLoggedIn.image || "",
-    });
-    dispatch(getTweets());
+    if (Object.keys(userLoggedIn).length === 0) {
+      toast({
+        position: "top",
+        title: "Please Login",
+        description:
+          "if you already login. please click on update profile to solve this issue.",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+      navigate("/login");
+    } else if (tweet || searchGif) {
+      await axios.post("https://nareshrajput-sportsk.up.railway.app/posts", {
+        username: userLoggedIn.username || "username",
+        tweet: tweet,
+        gif: selectedGif,
+        image: userLoggedIn.image || "",
+      });
+      dispatch(getTweets());
+    } else {
+      toast({
+        position: "top",
+        title: "Fill The Details",
+        description: "please type something or choose any gif.",
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+      });
+    }
   }
   return (
-    <Box my={"10"}>
+    <Box my={"10"} >
       <Container>
         <Flex>
           <Avatar
@@ -69,6 +93,7 @@ export const PostTweet = () => {
             color={"white"}
             my={"5"}
             onClick={onOpen}
+            fontSize={["xs","md","md","md"]}
           >
             GIF
           </Button>
@@ -79,6 +104,7 @@ export const PostTweet = () => {
             p={"0.25rem 1.3rem"}
             borderRadius={"2rem"}
             onClick={postTweet}
+            fontSize={["xs","md","md","md"]}
           >
             TWEET
           </Button>

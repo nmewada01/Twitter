@@ -12,16 +12,20 @@ const User = () => {
   const [profile, setProfile] = useState([]);
   const navigate = useNavigate();
   const getData = () => {
-    axios.get("https://nareshrajput-sportsk.up.railway.app/loginProfile").then((r) => {
-      setProfile(r.data);
-    });
+    axios
+      .get("https://nareshrajput-sportsk.up.railway.app/loginProfile")
+      .then((r) => {
+        setProfile(r.data);
+      });
   };
   const handleDelete = (id) => {
-    axios.delete(`https://nareshrajput-sportsk.up.railway.app/loginProfile/${id}`).then((r) => {
-      alert("profile removed successfull");
-      navigate("/login");
-      getData();
-    });
+    axios
+      .delete(`https://nareshrajput-sportsk.up.railway.app/loginProfile/${id}`)
+      .then((r) => {
+        alert("profile removed successfull");
+        navigate("/login");
+        getData();
+      });
   };
   useEffect(() => {
     getData();

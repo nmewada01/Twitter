@@ -2,6 +2,9 @@
   text-align: center;
   background-color: #f1f1f2;
 }
+* {
+  font-family: cursive;
+}
 
 .App-logo {
   height: 40vmin;
