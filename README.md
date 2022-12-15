@@ -1,3 +1,3 @@
 # Twitter meme official
 
-## Deploy link : https://nareshrajput-twitter.vercel.app/
+## Deploy link : https://nareshrajput-twittermeme.vercel.app/
