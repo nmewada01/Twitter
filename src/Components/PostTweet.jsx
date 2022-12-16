@@ -73,7 +73,7 @@ export const PostTweet = () => {
     }
   }
   return (
-    <Box my={"10"} >
+    <Box my={"10"}>
       <Container>
         <Flex>
           <Avatar
@@ -93,7 +93,7 @@ export const PostTweet = () => {
             color={"white"}
             my={"5"}
             onClick={onOpen}
-            fontSize={["xs","md","md","md"]}
+            fontSize={["xs", "md", "md", "md"]}
           >
             GIF
           </Button>
@@ -104,7 +104,7 @@ export const PostTweet = () => {
             p={"0.25rem 1.3rem"}
             borderRadius={"2rem"}
             onClick={postTweet}
-            fontSize={["xs","md","md","md"]}
+            fontSize={["xs", "md", "md", "md"]}
           >
             TWEET
           </Button>

@@ -143,7 +143,7 @@ export default function ViewTweet() {
                   w={"100%"}
                   objectFit="cover"
                   src={el.gif}
-                  alt="Chakra UI"
+                  alt={el.username}
                 />
               </Box>
             </Card>
