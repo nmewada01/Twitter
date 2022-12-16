@@ -29,10 +29,9 @@ import axios from "axios";
 export default function ViewTweet() {
   const dispatch = useDispatch();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const tweets = useSelector((store) => store.posts);
+  const tweets = useSelector((store) => store.posts.reverse());
   const cUser = useSelector((store) => store.current);
   const [editedTweet, setEditedTweet] = useState("");
-
   useEffect(() => {
     dispatch(getTweets());
   }, [dispatch]);
@@ -58,7 +57,12 @@ export default function ViewTweet() {
   }
   return (
     <Flex justifyContent={"center"}>
-      <Box as={SimpleGrid} columns={[1, 2,2, 3]} spacing={"10"} fontSize={["sm","md","md","md"]} >
+      <Box
+        as={SimpleGrid}
+        columns={[1, 2, 2, 3]}
+        spacing={"10"}
+        fontSize={["sm", "md", "md", "md"]}
+      >
         {tweets.map((el, index) => {
           return (
             <Card

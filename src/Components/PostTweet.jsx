@@ -36,7 +36,7 @@ export const PostTweet = () => {
   const toast = useToast();
   async function searchForGif() {
     let { data } = await axios.get(
-      `https://api.giphy.com/v1/gifs/search?api_key=sdUwHa4YZ4BYUgweGmrrIEXRyRxMCN1T&q=${searchGif}&limit=5&offset=0&rating=g&lang=en`
+      `https://api.giphy.com/v1/gifs/search?api_key=sdUwHa4YZ4BYUgweGmrrIEXRyRxMCN1T&q=${searchGif}&limit=10&offset=0&rating=g&lang=en`
     );
     setGifItems(data.data);
   }
